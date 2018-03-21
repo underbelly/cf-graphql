@@ -31,10 +31,10 @@ function get (url, params, opts) {
   }
 
   const {base, headers, timeline, cache} = opts;
-  const cached = cache[url];
-  if (cached) {
-    return cached;
-  }
+  // const cached = cache[url];
+  // if (cached) {
+  //   return cached;
+  // }
 
   const httpCall = {url, start: Date.now()};
   timeline.push(httpCall);
