@@ -52,7 +52,7 @@ function createEntryLoader (http) {
     .then(res => {
       const ctId = _get(res, ['sys', 'contentType', 'sys', 'id']);
       if (forcedCtId && ctId !== forcedCtId) {
-        throw new Error('Does not match the forced Content Type ID.');
+        throw new Error(`Does not match the forced Content Type ID. forceCtId: ${forceCtId}, ctId: ${ctId}`);
       } else {
         return res;
       }
